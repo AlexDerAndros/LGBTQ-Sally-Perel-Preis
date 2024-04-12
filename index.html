@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akzeptanz der LGBTQ+ Community.</title>
+    <script src="https://kit.fontawesome.com/c68f917b3f.js" 
+    crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@100;500&family=Roboto&display=swap');
+        body { 
+            overflow-x: hidden;
+            height: 100vh !important;
+            background: rgb(240,254,250);
+            text-rendering:optimizeLegibility;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden !important;
+        }
+        .titel {
+            font-size: 2.75vh;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 2.5%;
+            z-index: 100;
+            height: 2vw !important;
+        }
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            height: 200% !important;
+            gap: 70px;
+            z-index: 0 !important;
+            width: 100vw !important;
+            border: solid rgba(0, 0, 0, 0) 1px;
+            left: 0 !important;
+        }
+        #burger {
+            position: fixed;
+            font-size: 200%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            animation-duration: 1s;
+            z-index: 100;
+            transition: ease 0.1s;
+          
+        }
+        *, ::after, ::before {
+    box-sizing: border-box;
+}
+        .img1 {
+            height: 330px;
+            border-radius: 10px;
+            z-index: -10 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center;
+            text-align: center;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .infos {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3vw;
+            font-weight:bold ;
+            height: 50px !important;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cube1 {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            background-color: rgba(0, 255, 255, 0.226);
+            padding: 2vh;
+            border-radius: 10px;
+        }
+        .titel_cube1 {
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-size: 2.5vw;
+            align-items: center;
+            padding: 1vh;
+        }
+      
+        .text {
+            font-size: 2vw;
+            height: 50%;
+            display: flex !important;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+        .cubes {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu1 {
+            display: flex;
+            position: fixed;
+            height:50vh;
+            width: 100%;
+            background-color: rgb(22, 207, 130);
+            inset: 0;
+            transition: 0.3s ease;
+            display: flex;
+            transform: translatey(-49vh);
+            justify-content: center;
+            z-index: 999999 !important;
+        }
+        .title_menu {
+            color: rgb(0, 0, 0);
+            display: flex;
+            height: 20%;
+            align-items: center;
+            font-weight: 900;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .spacer {
+            width: 100vw;
+            height: 10vh;
+        }
+        #cross {
+            position: fixed;
+            font-size: 200%;
+            height: 10%;
+            width: 7%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            animation-duration: 1s;
+            z-index: 100;
+            transition: ease 0.1s;
+        }
+        ::placeholder {
+            text-align: center; 
+        }
+
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+        .search {
+            position: fixed;
+            font-size: 3vh;
+            height: 5.3vh;
+            width: 100vw;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            cursor: pointer;
+            animation-duration: 1s;
+            z-index: 100;
+            transition: ease 0.1s;
+            transform: translateX(90vw);
+                }
+        .footer {
+            width: 100.0vw;
+            height: 30vh;
+            background-color: rgb(168, 168, 255);
+            display: flex;
+            justify-content: center !important;
+            align-items: center;
+            padding-left: 5px !important;
+            margin-top: 50%;
+        }
+     
+        .spacer2
+        {
+            height: 130vh;
+            width: 100%;
+        }
+        .text4
+        {
+            display: flex;
+            width: 100vw;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        .mySlides {
+            display: none;
+        }
+        .input {
+            display: none;
+            height: 4vh;
+            padding: 0.5vh;
+            transition: ease-in 0.2s;
+            border-radius: 30px;
+            border: 1px solid rgb(255, 255, 255);
+            transform: translateX(-60vw) translateY(2vh);
+            position: absolute;
+            box-shadow: rgba(56, 214, 167, 0.589) 0px 5px 15px;
+            inset: 0%;
+        }
+        .input::placeholder {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            height: 100%;
+            color: black;
+        }
+        .input:focus {
+            color: black;
+        }
+        a { 
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: blue;
+            text-decoration: underline blue;
+        }
+        header {
+            width: 100%;
+            position: fixed;
+            inset: 0% ;
+            height: 7vh;
+            background-color: rgb(240,254,250) !important;
+		    /* box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px; */
+            z-index: 1;
+            display: flex;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            align-items: center;
+        }
+       li {
+        display: none;
+       }
+       li.active {
+        height: 50%;
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center !important;
+        align-items: left !important;
+        text-align: left;
+       }
+       
+       #prevBtn, #nextBtn {
+         font-size: 3.5vw;
+         cursor: pointer;
+         margin: -2vh 20%;
+         z-index: -100; 
+
+       }
+       .pos {
+         width: 100%;
+         height: 5vh;
+         display: flex;
+         justify-content: center;
+         z-index: 1000; 
+       }
+     
+       .page {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 100px;
+        left: 0%;
+        width: 100%;
+        transform: translatex();
+       }
+       .img {
+         width: 100vw;
+         height: auto;
+         display: flex;
+         justify-content: center;
+       }
+       
+       
+        .input::placeholder {
+            font-weight: 900;
+            font-family: "Poppins";
+        }
+        .input {
+            font-family: "Poppins";
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .fade {
+            background-color:white; 
+            border-radius: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fade 0.5s;
+            padding: 1vh;
+            margin:0% 15%;
+            border-radius: 10px;
+        }
+        
+        .prev, .next {
+           cursor: pointer;
+           font-size: 30px;
+           font-weight: 900;
+           padding: 50%;
+           background-color: white;
+           width: 150%;
+           height: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border: 3px solid black;
+           z-index: 100;
+        }
+       
+        .prev:hover {
+            color: white;
+            background-color: black;
+        }
+        .next:hover {
+            color: white;
+            background-color: black;
+        }
+        .pfeile {
+            width: 100%;
+            height: 5vh;
+            /* z-index: 100;  */
+            display: flex;
+            flex-direction: row;
+        }
+        .prevP {
+          text-align: left;
+        }
+       .pfeileOver {
+           width: 100%;
+           height: 5vh;
+           display:flex ;
+           justify-content: center;
+           align-items: center;
+           z-index: 1;
+
+          
+       }
+       .imgSally {
+         width: 100%;
+         height: 15%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       #themes {
+         display: flex ;
+         flex-direction: column;
+         text-align: left;
+         margin-top: 15%;
+         cursor: pointer;
+       }
+       iframe { 
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       .theme:hover {
+         color: blue;
+         text-decoration: underline blue;
+       }
+       .sonstigerText {
+         width: 80%; 
+         font-size: 2vh;
+       }
+       .textCon {
+         width: 100%;
+         padding: 2vh;
+         height: auto;
+         display: flex; 
+         justify-content: center;
+         align-items: center;
+         border-radius: 10px;
+       }
+       .gesamtU {
+         width: 100%;
+         height: 90%;
+         margin: 5% 0% 5% 0%;
+       }
+       .textSS {
+         margin: 2% 0%; 
+       }
+       .img2 {
+         width: 104%;
+         margin:0% -2%;
+       }
+       .themeOV {
+         font-weight: 700;
+         font-family:"Poppins", sans-serif ;
+       }
+       @media only screen and (max-width: 366px) {
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        .titel {
+            font-size: 16px !important;
+        }
+        .img1 {
+            height: 220px !important;
+        }
+        .text {
+            width: 69vw !important;
+        }
+        .cube1 {
+            height: 490px !important;
+            gap: 20px;
+            width: 100vw !important;
+        }
+       }
+       @media only screen and (max-width: 305px)
+        {
+            /* html {
+            } */
+            .titel {
+                font-size: 14px !important;
+            }
+            .img1 {
+                height: 190px !important;
+            }
+            /* .cube1 {
+                height: 400px;
+            } */
+            .text {
+                font-size: 10px !important;
+                width: 70vw !important;
+            }
+            .titel_cube1 {
+                font-size: 12px;
+            }
+        }
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        @media only screen and (max-width: 400px)
+        {
+            .cube1 {
+                height: auto;
+            }
+            .titel {
+                font-size: 15px !important;
+            }
+            .textSS {
+                font-size: 2vh;
+            }
+            .prev, .next {
+             cursor: pointer;
+             font-size: 15px;
+             font-weight: 900;
+             padding: 50%;
+             background-color: white;
+             width: 30px;
+             height: 30px;
+             border: 1px solid black;
+        }
+            /* .prevP {
+               margin: 0% -8% 0% 0% ;
+            } */
+
+            /* .cube1 {
+                width: 100% !important;
+                height: 40vh;
+            } */
+            @media only screen and (min-width: 360px)
+            {
+                .text {
+                    width: 70vw !important;
+                }
+                html {
+                    overflow-x: hidden;
+                    width: 100vw;
+                }
+                body {
+                    overflow-x: hidden;
+                    width: 100vw;
+                }
+            }
+        }
+        @media only screen and (max-width: 320px)
+        {
+            .titel {
+                font-size: 14px !important;
+            }
+            .textSS {
+                font-size: 2vh;
+            }
+        }
+       @media only screen and (max-width: 508px) {
+            .fade {
+              width: 70%;
+              height: 68vh;
+            }
+            iframe {
+             border-radius: 10px; 
+             height: 3vh; 
+             width: 80%;
+            }
+            .text {
+                font-size: 12px;
+            }
+            .titel_cube1 {
+                font-size: 14px;
+            }
+             .cube1 {
+                height: auto;
+                width: 100%;
+            } 
+            .infos {
+                height: 140px !important;
+                display: flex;
+                font-size: 16px;
+                font-weight: 900;
+                align-items: center;
+            }
+            .img1 {
+                height: 240px;
+            }
+            .titel {
+                font-size: 19px;
+            }
+            #burger {
+                margin: 1%;
+            }
+            #cross {
+                margin: 1%;
+            }
+           
+            li.active {
+                font-size: 12px;
+            }
+            .pfeileOver {
+                margin: -50vh 0vh;
+            }
+            .prevP {
+               margin: 0% 80% 0% 0% ;
+            }
+            .imgSally {
+              margin-top: -10% ;
+            }
+            .themes {
+              margin-top: 7%;
+            }
+            .themeOV {
+                font-size: 1.8vh;
+            }
+            .textSS {
+                font-size: 2vh;
+            }
+            @media screen and (max-height: 784px)
+            {
+                #dumm {
+                    transform: translateY(30px);
+                }
+                
+            }
+       }
+       @media only screen and (max-width: 800px) {
+        #burger {
+                margin: 1%;
+            }
+            #cross {
+                inset: 1%;
+            }
+            .cube1 {
+                height: auto;
+                width: 100%;
+            } 
+            li.active {
+                font-size: 13px;
+            }
+            iframe {
+                border-radius: 10px; 
+                height: 50vh; 
+                width: 90%;
+                margin: 0% 5%;
+            }
+            .text {
+                font-size: 12px;
+            }
+            .textSS {
+                font-size: 2vh;
+            }
+            .themeOV {
+                font-size: 1.9vh;
+            }
+            .pfeileOver {
+                margin: -50vh 0vh;
+            }
+            .prevP {
+               margin: 0% 81.5% 0% 0% ;
+            }
+       }
+       
+       @media only screen and (min-width: 800px) {
+            .infos {
+                height: 150px !important;
+                display: flex;
+                align-items: center;
+            }
+            .text {
+                font-size: 21px;
+            }
+            .titel_cube1 {
+                font-size: 28px;
+            }
+            #burger {
+                margin: 1%;
+            }
+            #cross {
+                inset: 0%;
+            }
+            /* .cube1 {
+                width: 80vw;
+                height: 50vh;
+            } */
+            li.active {
+              font-size: 18px ;
+            }
+            #dumm {
+                width: 70vw;
+            }
+            iframe {
+                border-radius: 10px; 
+                height: 50vh; 
+                width: 90%;
+                margin: 0% 5%;
+            }
+            .textSS {
+                font-size: 2vh;
+            }
+            .theme {
+                font-size: 1.8vh;
+            }
+            .input::placeholder {
+                font-size: 1.8vh;
+            }
+            .input {
+                font-size: 1.8vh;
+            }
+            .themeOV {
+                font-size: 2.2vh;
+            }
+            .pfeileOver {
+                margin: -40vh 0vh;
+            }
+            .prevP {
+               margin: 0% 81% 0% 0% ;
+            }
+            @media only screen and (max-height: 985px)
+            {
+                .text {
+                    font-size: 19px;
+                    width: 70vw;
+                }
+                .titel_cube1 {
+                    height: 130px !important;
+                }
+                /* .cube1 {
+                    height: 60vh !important;
+                } */
+                header {
+                    height: 70px !important;
+                }
+                .titel {
+                    font-size: 34px !important;
+                }
+                .titel_cube1 {
+                    font-size: 22px !important;
+                }
+            }
+            .sonstigerText {
+                font-size: 1.8vh;
+            }
+
+       }
+       @media only screen and (max-width: 1100px) {
+        .pfeileOver {
+                margin: -40vh 0vh;
+            }
+         .prevP {
+               margin: 0% 81% 0% 0% ;
+            }
+            #burger {
+                font-size: 35px;
+            }
+       }
+       @media only screen and (min-width: 1100px) {
+        .titel {
+                font-size: 30px;
+            }
+            .infos {
+                font-size: 25px;
+            }
+            .text {
+                font-size: 20px;
+                width: 40vw;
+                display: flex;
+                justify-content: center !important;
+                align-items: left;
+                text-align: left;
+            }
+            .cube1 {
+                /* height: 60vh; */
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                align-self: center;
+                align-content: center;
+            }
+            #burger {
+                font-size: 60px;
+                margin: 0.5% 0.25%;
+            }
+            #cross {
+                font-size: 50px;
+                inset: 1% 0.25%;
+            }
+            li.active {
+                font-size: 20px;
+            }
+            iframe {
+                border-radius: 10px; 
+                height: 65vh; 
+                width: 75%;
+                margin: 0% 12.5%;
+            }
+            .textSS {
+                font-size: 3vh;
+            }
+           .img2 {
+                height: 20%;
+                width: 101.1%;
+                margin:-1% -0.5%;
+            }
+            .sonstigerText {
+                font-size: 2.5vh;
+            }
+            .pfeileOver {
+                margin: -30vh 0vh;
+            }
+         .prevP {
+               margin: 0% 91% 0% 0% ;
+            }
+           
+       }
+       @media only screen and (min-width:1300px) {
+        #themes {
+                margin-top: 4%;
+                font-size: 2vh;
+            }
+            .themeOV {
+                font-size: 2.5vh;
+            }
+            .input {
+                font-size: 2vh;
+            }
+            .input::placeholder {
+                font-size: 2vh;
+            }
+            .pfeileOver {
+                margin: -50vh 0vh;
+            }
+         .prevP {
+               margin: 0% 91% 0% 0% ;
+            }
+            .sonstigerText {
+                font-size: 3vh;
+            }
+            .prev, .next {
+                width: 200%;
+                height: 150%;
+                font-size: 35px;
+                padding: 50%;
+            }
+       }
+       @media only screen and (min-width: 1500px) {
+            .sonstigerText {
+                font-size: 3vh;
+            }
+            .prev, .next {
+                width: 200%;
+                height: 150%;
+                font-size: 35px;
+                padding: 50%;
+            }
+            #themes {
+                margin-top: 4%;
+                font-size: 2.5vh;
+            }
+            .theme {
+                font-size: 2.5vh;
+
+            }
+            .themeOV {
+                font-size: 3.5vh;
+            }
+            .input {
+                font-size: 2.5vh;
+            }
+            .input::placeholder {
+                font-size: 2.5vh;
+            }
+            .pfeileOver {
+                margin: -50vh 0vh;
+            }
+         .prevP {
+               margin: 0% 91% 0% 0% ;
+            }
+
+            
+       }
+       @media only screen and (min-width: 1900px) {
+            .titel {
+                font-size: 30px;
+            }
+            .infos {
+                font-size: 25px;
+            }
+            .text {
+                font-size: 20px;
+                width: 40vw;
+                display: flex;
+                justify-content: center !important;
+                align-items: center;
+            }
+            .cube1 {
+                /* height: 60%; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                align-self: center;
+                align-content: center;
+            }
+            #burger {
+                font-size: 50px;
+                margin: 0.5% 0.25%;
+            }
+            #cross {
+                font-size: 50px;
+                inset: 0.5% 0.25%;
+            }
+            iframe {
+                border-radius: 10px; 
+                height: 70vh; 
+                width: 70%;
+                margin: 0% 15%;
+            }
+            .textSS {
+                font-size: 3vh;
+            }
+            .sonstigerText {
+                font-size: 3.2vh;
+            }
+            .prev, .next {
+                width: 200%;
+                height: 150%;
+                font-size: 35px;
+                padding: 50%;
+            }
+            .themes {
+                margin-top: 3%;
+            }
+            .pfeileOver {
+                margin: -30vh 0vh;
+            }
+         .prevP {
+               margin: 0% 91% 0% 0% ;
+            }
+       }
+       
+
+    </style>
+</head>
+<body>
+    <div class="menu1">
+        <i class="fa-solid fa-xmark" id="cross"></i>
+         <div class="search">
+            <i class="fa-solid fa-magnifying-glass" id="search"></i>
+            <input type="text" placeholder="Suchen..." class="input">
+         </div> 
+         
+   
+   <div id="themes">
+    <div class="themeOV">Themen auf der Website</div>
+     <div class="theme" onclick="scrollToG()">Generelle Informationen</div>
+     <div class="theme" onclick="scrollToE()">Erklärvideo</div>
+     <div class="theme" onclick="scrollToUE()">Eigene Umfrage in der Schule</div>
+     <div class="theme" onclick="scrollToW()">Weitere Informationen</div>
+     <div class="theme" onclick="scrollToUB()">Umfragebogen</div>
+     <div class="theme" onclick="scrollToI()">Impressum</div>
+   </div>
+
+          </div>
+    </div>
+    
+    <div class="spacer"> </div>
+    <div class="main">
+        <div class="container1">
+            <header>
+                <i class="fa-solid fa-bars" id="burger"></i>
+            </header> 
+            <div class="page">
+              <div class="titel">
+                Akzeptanz der LGBTQ Community
+              </div>
+              <div class="img" style="z-index: 0;">
+                <img src='lgbtq.jpeg' class="img1" height="70vw">
+              </div>
+
+             <div class="infos" id="GI">
+              Generelle Informationen
+            </div> 
+            <div class="cubes">
+                <div class="cube1" style="background-color: rgba(242, 141, 141, 0.308); height: auto; ">
+                    <div class="titel_cube1 "  id="#dumm">
+                        Was ist die LGBTQ Community?
+                    </div> 
+                    <div class="text" >
+                        Die LGBTQ Community beschreibt ein Zusammenschluss von Menschen, die
+                        sich für die Anerkennung der Vielfalt von sexuellen und geschlechtlichen 
+                        Identitäten und Orientierungen zur Aufgabe gemacht hat. Außerdem ist es ihr Ziel, 
+                        dass Menschen, die dieser Community angehören gleich in der Gesellschaft gestellt werden.
+                        Und hier ist auch nochmal eine Übersicht wofür das Wort LGBTQ steht: 
+                        <div class="erklR">
+                         <div> <b>L</b>: lesbian auf Deutsch Lesbisch: Frau, die sich zu Frauen angezogen fühlen </div> 
+                         <div> <b>G</b>: gay auf Deutsch Schwule: Männer, die sich zu anderen Männern angezogen fühlen </div>
+                         <div> <b>B</b>: bisexual auf Deutsch bisexuell: Menschen, die sich zu beiden Geschlechtern angezogen fühlen.</div>
+                         <div> <b>T</b>: transgender auf Deutsch Transgeschlechtigkeit: Menschen, deren Geschlecht nicht mit ihrem biologischem Geschlecht mit übereinstimmt.</div>
+                         <div> <b>Q</b>: queer auf Deutsch auch queer: Es ist ein Begriff, womit mehrere Gruppen gemeint sind. Darunter zählen zum Bespiel , der Menschen mit unterschiedlichen Geschlechts- und/oder Sexualitätsidentitäten zusammenfasst und auch als Sammelbegriff für Personen verwendet wird, die sich nicht mit den traditionellen Kategorien identifizieren .</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cube1" style=" background: rgb(245, 183, 132); height: auto; ">
+                    <div class="titel_cube1 " >
+                        Was bedeutet so genau Homophobie?
+                    </div> 
+                    <div class="text" id="dumm" style="height: auto; ;" >
+                        Homophobie bezeichnet eine irrationale negative Einstellung, Abneigung oder Diskriminierung gegenüber der LGBTQ Community. Es umfasst Vorurteile, Stereotypen und feindseelige Haltungen, die auf der sexuellen Orientierung oder der Geschlechtsidentität einer Person basaieren. Homophobie kann sich auf individueller Ebenen in Form von beleidigenden Kommentaren, Diskriminierung oder Gewalt äußern, oder auf Ebene in Gesetzen, politischen Entscheidungen oder gesellschaftliche Normen vorkommen. Der Begriff wird oft verwendet, um auf ein breites Sortiment von negativen Einstellungen gegenüber LGBTQ+ Personen hinzuweisen.
+                    </div>
+                </div>
+                <div class="cube1"  style="background-color: rgb(236, 241, 187);  height: auto;">
+                    <div class="titel_cube1">
+                        Was ist die LGBTQ und Wer gehört alles dazu?
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <div class="les">
+                               
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                                    Lesben 
+                              
+                            </div>
+                            <div class="bis">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                                Bisexuelle
+                            </div>
+                                <div class="tran">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    Transgender
+                                </div>
+                                <div class="que">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    Queer
+                                </div>
+                                <div class="inter">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    Intersex
+                                </div>
+                                <div class="ase">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    Asexuelle
+                                </div>
+                                <div class="pans">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    Pansexuelle
+                                </div>
+                                <div class="and">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    Andere nicht-heteronormative Identitäten
+                                </div>
+                                <div class="sch">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    Schwule
+                                </div>
+                        </ul>
+                    </div>
+                </div>
+                  <div class="cube1" style=" height: auto; background-color: rgba(77, 235, 169, 0.705);">
+                    <div class="titel_cube1">
+                        Lösungen gegen die Ausgrenzung der LGBTQ Community
+                    </div>  
+                    <ul id="elementList" style="font-size: 6.5vh;" ></ul>
+                    <div class="pos">   
+                     
+                        <div id="prevBtn"><i class="fa-solid fa-arrow-right" style="transform:rotate(180deg);"></i></div>
+                        <div id="nextBtn"><i class="fa-solid fa-arrow-right"></i></div>
+                       </div>
+                </div>
+            </div>  
+                
+          <div class="umfrage">
+            <div class="infos" id="UE">
+                Eigene Umfrage in der Schule
+              </div>  
+             <div class="textCon" style="background-color: rgba(143, 134, 238, 0.642);;">
+              <div class="sonstigerText">
+                Wir haben eine eigene Umfrage gemacht, wo 50 Schüler befragt wurden, 
+                ob sie es tolerieren würden, wenn sich jemand in deren Umkreis als homosexuell 
+                outen würden und das waren die Ergebnisse:
+               </div>
+              </div>  
+              <img src="GesamtU.jpeg" class="gesamtU">
+              <div class="textCon" style="background-color: rgba(200, 145, 214, 0.699);">
+                <div class="sonstigerText">
+                 Hier kann man sehen, dass 34 von 50 Personen verschiedenen Alters es tolerieren würden, wenn ihr Freund sich als 
+                 homosexuell outen würde. Das entspricht 68%. Allerdings würden es 16 von 50 Personen nicht tolerieren. 
+                 Das entspricht 32%.
+                </div>
+              </div>  
+              <img src="JaU.jpeg" class="gesamtU">
+              <div class="textCon" style=" background-color: rgba(96, 192, 192, 0.226);">
+                <div class="sonstigerText">
+                  Bei der Umfrage waren 100% der Personen, die für ja bei der Umfrage abgestimmt haben
+                  über 16 Jahre alt, was daran liegen könnte, dass alle genau wissen, dass man es respektieren 
+                  sollte, wenn jemand homosexuell ist.
+                </div>
+              </div>  
+              <img src="NeinU.jpeg" class="gesamtU">
+              <div class="textCon" style="background-color: rgba(176, 241, 174, 0.773);">
+                <div class="sonstigerText">
+                  Von den 16 Stimmen, die für nein abgestimmt haben, waren 10 Personen unter
+                  12 Jahre alt, was 62,5% der Nein-Stimmen entspricht, wo hingegen 6 Personen für 
+                  nein abgestimmt haben, die 15 oder 16 Jahre alt sind. Das entspricht 37,5%. Bei den unter
+                  12-Jährigen könnte es an der mangelden Aufklärung diesen Themas liegen. 
+                </div>
+              </div>  
+              
+          </div>
+          <div class="infos" id="ER">
+            Erklärvideo
+          </div>  
+          <div class="textCon" style="background-color: rgba(234, 156, 212, 0.777);">
+           <div class="sonstigerText">
+             Hier gibt es auch noch ein kleines Erklärvideo, wo nochmal eine Umfrage, 
+             die wir selbst gemacht haben und die generellen Informationen bisauf die Frage "Was ist die LGBTQ Community?" aufgegriffen sind.
+             Viel Spaß! 
+            </div>
+          </div>
+          <iframe style ="text-align: center;" src="https://www.youtube.com/embed/tbPL4-sI4y4?si=nENtw-uR3qMAVjbf" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+          <div class="infos" id="W">
+            Weitere Informationen
+          </div> 
+           <div class=" mySlides  fade " style="margin-top: -10%; background-color: rgba(242, 141, 141, 0.308); height: auto;">
+                      <div class="titel_cube1 ">
+                        Sally Perel Preis-Was ist der Sally Perel Preis?
+                      </div> 
+                      <div class="textSS" >
+                         Der Sally-Perel-Preis würdigt Schülerinnen und Schüler, die sich für Toleranz,
+                         Verständnis und Respekt engagieren. Die Auszeichnung am Otto-Hahn-Gymnasium ermöglicht
+                         es den Schülern, kreative Projekte zu wählen und bis zu den Osterferien einzureichen, um auf einen Misstand 
+                         in der Gesellschaft Aufmerksam zu machen . Sally Perel, als Namenspatron, fördert die Verbundenheit mit Themen wie
+                          Verantwortung und Menschlichkeit. Der Preis wird am Ende des Schuljahres für herausragende Projekte verliehen. 
+                      </div>
+                      <br>
+                      <img src="./SallyPerel.jpeg" class="imgSally">
+                      
+                </div>
+                    
+
+                    <div class="  mySlides   fade" style="background: rgb(245, 183, 132); height: auto;">
+                        <div class="titel_cube1">
+                          Sally Perel Preis- Wer war Sally Perel?
+                        </div> 
+                        <div class="textSS">
+                            Sally Perel war ein deutscher Jude, der während des Zweiten Weltkriegs in der Hitlerjugend diente,
+                            indem er seine jüdische Identität verheimlichte. Sally Perels Eltern wurden von den Nationalsozialisten ermordet.
+                             Sie fielen dem Holocaust zum Opfer. Seine Geschichte wurde bekannt durch das Buch "Ich war Hitlerjunge Salomon"
+                            und zeigt die Komplexität von Identität und Überleben in dieser schwierigen Zeit.
+                        </div>
+                        <br>
+                        <img src="./SallyPerel.jpeg" class="imgSally">
+                        
+                    </div>
+                    <div class=" mySlides  fade" style="height: auto; background-color: rgb(236, 241, 187);">
+                       <div class="titel_cube1">
+                         Wie ist die LGBTQ Community entstanden?
+                       </div>
+                            <div class="textSS">
+                             Die Anfänge der LGBTQ Community gab es chon im Jahr 1897. In diesem Jahr hat ein
+                             Arzt und Sexualwissenschaftler namens Magnus Hirschfeld die weltweit erste Organisation, die sich
+                             für Gleichberechtigung Homosexuller und gegen antihomosexuelle Strafgesetzte einsetzt gegründet das
+                             Wissentschaftlich-humanitäre Komitee. Damit gilte Hirschfeld als eine Symbolfigur der homosexuellen Bürgerrechtsbewegung
+                             zu der Zeit. Aus dieser Bewegung kamen immer mehr Bewegungen in der Zukunft zum Vorschein sowie die LGBTQ Community, die
+                             am 28.6.1970 in New York entstanden ist.
+                        </div>
+                           
+                     </div> 
+                     <div class=" mySlides  fade" style="height: auto;  background-color: rgba(77, 235, 169, 0.705);">
+                        <div class="titel_cube1">
+                          Akzeptanz von Homosexuellen im 20.Jahrhundert-1
+                        </div>
+                             <div class="textSS">
+                               Zur Zeit der Weimarer Republik gab es Versuche das Prinzip davon abzuschaffen, dass der 
+                               Staat legitimert homosexuelle und bisexuelle Männer verfolgt, jedoch ist es gescheitert.
+                               Nachdem die Weimarer Republik untergegangen ist und die NSDAP in Deutschland aufgestiegen ist und regiert hat wurde
+                               die Regelung von der Weimarer Republik nochmal verschärft. Dort reichte selbst ein Verdacht aus, dass man homosexuell
+                               ist und schon wurde man in ein Gefängnis oder im schlimmsten Fall in ein Konzentrationslager gebracht. Hinzu kommt, 
+                               dass Homosexuelle in Konzentrationslagern eine aufgenähtes rosa Dreieck auf ihre Häftlingskleidung zur Kennzeichnung erhilten.
+                               
+                            
+                      </div> 
+                    </div> 
+                    <div class=" mySlides  fade" style="height: auto; background-color: rgba(143, 134, 238, 0.642);">
+                        <div class="titel_cube1">
+                          Akzeptanz von Homosexuellen im 20.Jahrhundert-2
+                        </div>
+                             <div class="textSS">
+                                Wo Deutschland anschließend im zweiten Weltkrieg verloren hat, wurde Deutschland in die BRD und in die DDR unterteilt.
+                                In der DDR milderte man die Gesetze vom früheren Nationalsozialismus und verwendete wieder die Gesetzeslage aus dem deutschen Kaiserreich, wo 
+                                Beziehungen zwischen zwei Geschlechtern trotzdem noch verboten war. Anders ging es in der BRD zu. Sie beschloss, die burtale Verfolgung der Nationalsozialisten von Homosexuellen weiterzuführen.
+                                Außerdem gab es in den 1980er eine AIDS Krise, wovor die Bevölkerung sehr viel Angst hatten und homosexuelle Personen als Sündenbock verwendet wurden.
+                            </div> 
+                    </div>
+                    <div class=" mySlides  fade" style="background-color: rgba(200, 145, 214, 0.699);;" >
+                        <div class="titel_cube1">
+                          Akzeptanz von Homosexuellen im 20.Jahrhundert-3
+                        </div>
+                             <div class="textSS">
+                                Im Jahr 1990 hat die Weltgesundheitsorganisation Homosexualität von der Liste der psychischer Krankheiten zu streichen, was ein erster Schritt war, damit Homosexuelle
+                                akzeptiert werden. Danach wurde die Zeit, wo der Staat Homosexuelle verfolgt hat, endlich im Jahr 1994 vorbei.                                
+                            </div> 
+                            <img src="lgbtq2.jpg" class="img2">
+                    </div>
+                </div>
+                    <div class="pfeileOver">
+               
+                        <div class="pfeile">
+                          <div class="prevP">
+                           <div class="prev" onclick="plusSlides(-1)">
+                              <
+                            </div>
+                          </div>
+                          <div class="nextP">  
+                           <div class="next" onclick="plusSlides(1)">
+                               >
+                           </div>
+                          </div>
+                      </div> 
+                  </div>
+                  
+               
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+     <div class="spacer2"></div> 
+    <div class="footer" id="I" style="height: auto;" >
+        <div class="textSS">
+            <div class="infos">Impressum</div>
+            Erstellt von&nbsp;<a href="https://github.com/AlexDerAndros" style="text-decoration: underline black;">Alex&nbsp; </a> and&nbsp;<a href="https://github.com/Marcodoro" style="text-decoration: underline black;">Marco</a>  
+             <br>   Quellen: <a href="https://www.fernsehlotterie.de/magazin/was-bedeutet-lgbtq/">Fernsehlotterie</a>, <a href="  https://www.verlagederzukunft.de/die-geschichte-der-lgbtqia-community-in-deutschland-1871-bis-heute/#:~:text=Das%20Wissenschaftlich%2Dhumanit%C3%A4re%20Komitee%20(WhK,und%20gegen%20antihomosexuelle%20Strafgesetze%20einsetzt">verlagederzukunft.de</a>, 
+             <a href="https://de.wikipedia.org/wiki/LGBT">Wikipedia LGBT</a>, <a href="https://de.wikipedia.org/wiki/Homophobie">Wikipedia Homophobie</a> und <a href="https://www.sally-perel.de/">sally-perel.de</a>. <br>
+             <div style="font-weight: bold;">Haftungshinweis: </div>
+             Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+             <div style="font-weight: bold;">Urheberrechtshinweis: </div>
+             Die erstellten Inhalte und Werke auf dieser Webseite unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+           <br>  
+           Bei Fragen oder Anmerkungen kontaktieren Sie uns bitte über die angegebene E-Mail Adresse: alexandros.ntrikos@ohg-monheim.eu.
+           <br>
+           <a href="https://kit.fontawesome.com/c68f917b3f.js"> Link zu den Icons</a>
+        </div>
+    </div>
+</body>
+    <script>
+        const burger = document.querySelector("#burger");
+        const cross = document.querySelector("#cross");
+        const search = document.querySelector("#search");
+        const menu = document.querySelector(".menu1");
+        const img = document.querySelector(".img1");
+        const input = document.querySelector(".input");
+        const container = document.querySelector('.container');
+        const elementList = document.querySelector("#elementList");
+        const prevBtn = document.querySelector("#prevBtn");
+        const nextBtn = document.querySelector("#nextBtn");
+        const items = document.querySelectorAll(".theme");
+        const GI = document.getElementById("GI");
+        const I = document.getElementById("I");
+        const UE = document.getElementById("UE");
+        const W = document.getElementById("W");
+        const ER = document.getElementById("ER");
+        const UB = document.getElementById("UB");
+        function scrollToG() {
+          GI.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToE() {
+          ER.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToI() {
+          I.scrollIntoView({ behavior: 'smooth' });
+        } 
+        function scrollToW() {
+          W.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToUE() {
+          UE.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToUB() {
+            UB.scrollIntoView({ behavior: 'smooth' });
+        }
+        let searched = false;
+        burger.addEventListener('click' , clicked);
+       search.addEventListener('click', searchfor);
+        cross.addEventListener('click' , close);
+
+        function clicked() {
+            img.style.z_index = '-1';
+            burger.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+            burger.style.transform = 'scale(1)';
+            }, 300);
+            menu.style.transform = 'translateY(-0vh)'
+            
+            input.style.width = '0vw';
+                input.style.display = 'flex';         
+                searched = true;
+                setTimeout(() => {
+                input.style.width = '40vw';
+                }, 0)
+        }
+
+        function close() {
+            menu.style.transform = 'translateY(-49vh)'
+        }
+
+         function searchfor() {
+            if (searched == false)
+            {
+                input.style.width = '0vw';
+                input.style.display = 'flex';         
+                searched = true;
+                setTimeout(() => {
+                input.style.width = '40vw';
+                }, 0)
+            }
+            else if (searched == true)
+            {
+                searched = false;
+                input.style.width = '0vw';
+                setTimeout(() => {
+                    input.style.display = 'none';         
+                }, 200);
+             }
+        }
+        const data = [
+         "1. Man könnte Kinder, Jugendliche oder auch Erwachsene über das Thema Homosexualität und über die LGBTQ Community aufklären und die Leute, die diese Personengruppe ausschließen klar machen, dass man jede Sexualität respektieren sollte.",
+         "2. Ein weiterer Tipp ist, dass man auch dagegen demonstrieren könnte. Damit macht man die Leute auf das Thema aufmerksam. Allerdngs sind Demonstrationen allgemein nicht so eine gute Idee, da viele Leute von sowas verägert werden.",
+         "3. Was man auch noch gegen die Diskriminierung der LGBTQ Community tun könnte ist einfach, dass man die Befürwortung der LGBTQ Community nicht erzwingt, denn wenn man nicht aktiv dagegen vorgeht, könnte es sein, dass das Zusammenleben mit den Angehörigen für die Leute, die diese Gruppe diskriminieren, völlig normal wird. ",
+         " 4. Man könnte auch noch rein theoretisch die Leute bestafen, die die LGBTQ Community diskriminieren, bestrafen. Jedoch kann man das nicht wirklich kontrollieren und das würde dieses Problem über eine längere Zeit auch nicht bekämpfen.",
+         "5. Die letzte Lösung von uns für dieses Problem ist, dass man die Sichtbarkeit in z.B. Werbungen, Politik oder weiteres fördert, denn dadurch werden sie gleichgestellt in der Gesellschaft und sie werden dann auch von den Leuten, die die diskriminieren, höchwahrscheinlich als normal angesehen."
+        ];
+        document.addEventListener("DOMContentLoaded", function() {
+          let currentIndex = 0;
+          function showItem(index) {
+            const items = elementList.getElementsByTagName("li");
+            for(let i = 0; i < items.length; i++) {
+                items[i].classList.remove("active");
+            }
+            items[index].classList.add("active");
+          }
+          function createListFromArray(data) {
+            data.forEach( item => {
+             const li = document.createElement("li");
+             li.textContent = item;
+             elementList.appendChild(li);
+            });
+          }
+        prevBtn.addEventListener("click", function() {
+            currentIndex = (currentIndex - 1 + data.length) % data.length;
+            showItem(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", function(){
+            currentIndex = (currentIndex + 1) % data.length;
+            showItem(currentIndex);
+        });
+
+        createListFromArray(data);
+        showItem(currentIndex);
+        input.addEventListener("input", function() {
+        const searchTerm = input.value.toLowerCase().trim();
+
+        items.forEach(item => {
+            const itemName = item.textContent.toLowerCase();
+
+            if (itemName.includes(searchTerm)) {
+                item.style.display = "block";
+            } 
+             else {
+                item.style.display = "none";
+            }
+        });
+    });
+        });
+
+       
+        let slideIndex = 1; 
+        showSlides(slideIndex);
+
+         function plusSlides(n) {
+           showSlides(slideIndex += n);
+         }
+
+      
+
+         function showSlides(n) {
+           let i;
+           let slides = document.getElementsByClassName("mySlides");
+           let dots = document.getElementsByClassName("dot");
+           if (n > slides.length) {
+            slideIndex = 1;
+           }    
+           if (n < 1) {
+            slideIndex = slides.length;
+           }
+           for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+           }
+           for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active1", "");
+           }
+           slides[slideIndex-1].style.display = "block";  
+           dots[slideIndex-1].className += " active1";
+         }
+       
+    </script>
+</body>
+</html>
